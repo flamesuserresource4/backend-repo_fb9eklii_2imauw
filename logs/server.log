@@ -1,0 +1,26 @@
+INFO:     Will watch for changes in these directories: ['/home/workspace']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [153] using StatReload
+INFO:     Started server process [155]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     172.20.0.1:57786 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:57780 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57780 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57792 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57792 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57024 - "OPTIONS /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57024 - "POST /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57024 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57024 - "POST /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45374 - "POST /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45374 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57024 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57024 - "POST /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45374 - "POST /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:57024 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45390 - "POST /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45374 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45390 - "GET /api/payments HTTP/1.1" 200 OK
+INFO:     172.20.0.1:34452 - "POST /api/payments/691bbed09dabfd1912715efb/capture HTTP/1.1" 200 OK
+INFO:     172.20.0.1:34452 - "GET /api/payments HTTP/1.1" 200 OK

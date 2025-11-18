@@ -12,10 +12,9 @@ Model name is converted to lowercase for the collection name:
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, Literal
 
-# Example schemas (replace with your own):
-
+# Example schemas (kept for reference)
 class User(BaseModel):
     """
     Users collection schema
@@ -38,11 +37,23 @@ class Product(BaseModel):
     category: str = Field(..., description="Product category")
     in_stock: bool = Field(True, description="Whether product is in stock")
 
-# Add your own schemas here:
-# --------------------------------------------------
+# Stripe-like models for our fintech demo
+class Customer(BaseModel):
+    """
+    Customers collection schema
+    Collection name: "customer"
+    """
+    name: str = Field(..., description="Customer full name")
+    email: str = Field(..., description="Customer email")
+    business: Optional[str] = Field(None, description="Business name if applicable")
 
-# Note: The Flames database viewer will automatically:
-# 1. Read these schemas from GET /schema endpoint
-# 2. Use them for document validation when creating/editing
-# 3. Handle all database operations (CRUD) directly
-# 4. You don't need to create any database endpoints!
+class Payment(BaseModel):
+    """
+    Payments collection schema
+    Collection name: "payment"
+    """
+    amount: int = Field(..., ge=1, description="Amount in smallest currency unit (e.g., cents)")
+    currency: str = Field(..., min_length=3, max_length=3, description="ISO currency code, e.g., USD")
+    description: Optional[str] = Field(None, description="Payment description")
+    customer_id: Optional[str] = Field(None, description="Related customer id")
+    status: Literal['authorized','captured','failed'] = Field('authorized', description="Payment status")
